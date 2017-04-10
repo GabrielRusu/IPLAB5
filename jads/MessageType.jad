@@ -1,0 +1,40 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   MessageType.java
+
+package com.company;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MessageType
+{
+
+    public MessageType()
+    {
+        messageList = new ArrayList(5);
+        requestReceived = "This is a request recieved message.";
+        requestSent = "Your request has been sent";
+        requestApproved = "Your request has been approved.";
+        requestDenied = "Your request has been denied.";
+        requestFinalised = "Your request has been finalised. You can come.";
+        messageList.add(requestReceived);
+        messageList.add(requestApproved);
+        messageList.add(requestDenied);
+        messageList.add(requestFinalised);
+        messageList.add(requestSent);
+    }
+
+    public String getMessage(int type)
+    {
+        return (String)messageList.get(type);
+    }
+
+    private List messageList;
+    private String requestReceived;
+    private String requestSent;
+    private String requestApproved;
+    private String requestDenied;
+    private String requestFinalised;
+}

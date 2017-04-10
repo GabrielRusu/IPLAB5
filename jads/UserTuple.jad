@@ -1,0 +1,41 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   UserTuple.java
+
+package com.company;
+
+
+// Referenced classes of package com.company:
+//            UserType
+
+public class UserTuple
+{
+
+    public UserTuple()
+    {
+    }
+
+    public long getUserId()
+    {
+        return userId;
+    }
+
+    public void setUserId(long userId)
+    {
+        this.userId = userId;
+    }
+
+    public UserType getUserType()
+    {
+        return userType;
+    }
+
+    public void setUserType(UserType userType)
+    {
+        this.userType = userType;
+    }
+
+    private long userId;
+    private UserType userType;
+}

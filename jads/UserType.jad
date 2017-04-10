@@ -1,0 +1,39 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   UserType.java
+
+package com.company;
+
+
+public final class UserType extends Enum
+{
+
+    public static UserType[] values()
+    {
+        return (UserType[])$VALUES.clone();
+    }
+
+    public static UserType valueOf(String name)
+    {
+        return (UserType)Enum.valueOf(com/company/UserType, name);
+    }
+
+    private UserType(String s, int i)
+    {
+        super(s, i);
+    }
+
+    public static final UserType SECRETARY;
+    public static final UserType STUDENT;
+    private static final UserType $VALUES[];
+
+    static 
+    {
+        SECRETARY = new UserType("SECRETARY", 0);
+        STUDENT = new UserType("STUDENT", 1);
+        $VALUES = (new UserType[] {
+            SECRETARY, STUDENT
+        });
+    }
+}

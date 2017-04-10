@@ -1,0 +1,48 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Notification.java
+
+package com.company;
+
+import java.io.PrintStream;
+import java.util.List;
+
+// Referenced classes of package com.company:
+//            MessageType, SendNotification, UserType
+
+public class Notification
+    implements SendNotification
+{
+
+    private Notification()
+    {
+        messageType = new MessageType();
+    }
+
+    public List getStudentsEmailList()
+    {
+        return studentsEmailList;
+    }
+
+    public void setStudentsEmailList(List studentsEmailList)
+    {
+        this.studentsEmailList = studentsEmailList;
+    }
+
+    public void sendSms(long userId, UserType userType, Integer messageId)
+    {
+        System.out.println((new StringBuilder()).append(userType.toString()).append("with id: ").append(userId).append("has received the message: ").append(messageType.getMessage(messageId.intValue())).toString());
+    }
+
+    public void sendEmail(long userId, UserType userType, Integer messageId)
+    {
+        System.out.println((new StringBuilder()).append(userType.toString()).append("with id: ").append(userId).append("has received the e-mail: ").append(messageType.getMessage(messageId.intValue())).toString());
+    }
+
+    private MessageType messageType;
+    private static Notification notificationInstance;
+    public static Notification Instance = new Notification();
+    private List studentsEmailList;
+
+}
